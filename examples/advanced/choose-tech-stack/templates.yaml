@@ -1,0 +1,7 @@
+recommendation:
+  - type: "positive"
+    template: "Based on your inputs, this tech stack appears to be a good choice for your project. It offers a good balance of scalability, community support, and development velocity."
+  - type: "negative"
+    template: "Based on your inputs, this tech stack might not be the best choice for your project. The talent pool and cost are significant concerns."
+  - type: "neutral"
+    template: "The decision of which tech stack to choose is not clear-cut in your case. There are both pros and cons to consider. It is recommended to further evaluate your project's specific needs."

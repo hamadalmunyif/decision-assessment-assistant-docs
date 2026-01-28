@@ -1,0 +1,7 @@
+recommendation:
+  - type: "positive"
+    template: "Based on your inputs, starting a freelance career appears to be a promising path for you. The market demand and your financial stability seem to align with this decision."
+  - type: "negative"
+    template: "Based on your inputs, starting a freelance career might not be the best decision for you right now. The financial uncertainty and market conditions suggest you should reconsider."
+  - type: "neutral"
+    template: "The decision to start freelancing is not clear-cut in your case. There are both pros and cons to consider. It is recommended to further evaluate your priorities and the market."

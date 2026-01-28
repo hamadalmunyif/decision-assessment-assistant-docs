@@ -1,0 +1,16 @@
+- name: "Financial Stability"
+  description: "Your ability to manage variable income and financial uncertainty."
+  category: "Financial"
+  default_weight: 0.4
+- name: "Market Demand"
+  description: "The demand for your skills in the freelance market."
+  category: "Career"
+  default_weight: 0.3
+- name: "Work-Life Balance"
+  description: "The potential impact on your work-life balance."
+  category: "Lifestyle"
+  default_weight: 0.2
+- name: "Entrepreneurial Spirit"
+  description: "Your willingness to handle the business aspects of freelancing (e.g., marketing, sales, administration)."
+  category: "Personal"
+  default_weight: 0.1

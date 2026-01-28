@@ -1,0 +1,20 @@
+- name: "Valuation"
+  description: "The intrinsic value of the stock compared to its current market price."
+  category: "Financial"
+  default_weight: 0.3
+- name: "Financial Health"
+  description: "The financial health of the company, including its revenue, earnings, and debt."
+  category: "Financial"
+  default_weight: 0.25
+- name: "Competitive Advantage"
+  description: "The company's competitive advantage or 'moat'."
+  category: "Business"
+  default_weight: 0.2
+- name: "Market Outlook"
+  description: "The outlook for the company's industry and the overall market."
+  category: "Business"
+  default_weight: 0.15
+- name: "Risk Factors"
+  description: "The risks associated with the investment, including market risk, company-specific risk, and regulatory risk."
+  category: "Risk"
+  default_weight: 0.1

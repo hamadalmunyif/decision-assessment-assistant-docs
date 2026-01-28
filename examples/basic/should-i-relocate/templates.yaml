@@ -1,0 +1,7 @@
+recommendation:
+  - type: "positive"
+    template: "Based on your inputs, relocating to the new city appears to be a good decision for you. The career opportunities and quality of life seem to align with your priorities."
+  - type: "negative"
+    template: "Based on your inputs, relocating might not be the best decision for you right now. The cost of living and the distance from your social network suggest you should reconsider."
+  - type: "neutral"
+    template: "The decision to relocate is not clear-cut in your case. There are both pros and cons to consider. It is recommended to further evaluate your priorities and the new city."

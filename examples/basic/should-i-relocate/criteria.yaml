@@ -1,0 +1,16 @@
+- name: "Cost of Living"
+  description: "The difference in the cost of living between your current city and the new city."
+  category: "Financial"
+  default_weight: 0.3
+- name: "Career Opportunities"
+  description: "The availability of relevant job opportunities in the new city."
+  category: "Career"
+  default_weight: 0.3
+- name: "Quality of Life"
+  description: "The overall quality of life in the new city, including factors like culture, climate, and safety."
+  category: "Lifestyle"
+  default_weight: 0.2
+- name: "Social Network"
+  description: "The proximity to friends and family."
+  category: "Personal"
+  default_weight: 0.2

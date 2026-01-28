@@ -1,0 +1,7 @@
+recommendation:
+  - type: "positive"
+    template: "Based on your inputs, investing in this stock appears to be a good decision. The company's valuation and financial health are strong, and it has a significant competitive advantage."
+  - type: "negative"
+    template: "Based on your inputs, investing in this stock might not be the best decision for you right now. The valuation and market outlook are significant concerns."
+  - type: "neutral"
+    template: "The decision to invest in this stock is not clear-cut in your case. There are both pros and cons to consider. It is recommended to further evaluate your risk tolerance and the market conditions."

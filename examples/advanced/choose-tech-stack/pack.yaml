@@ -1,0 +1,6 @@
+id: choose-tech-stack
+name: "Choose a Tech Stack Pack"
+version: 1.0.0
+author: "Manus AI"
+description: "An advanced pack to help you choose a tech stack for a new project."
+tags: ["development", "software", "architecture"]

@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://daa.example.com/schemas/pack.schema.json",
+  "title": "DAA Pack Metadata Schema",
+  "description": "JSON Schema for validating pack.yaml files in the DAA ecosystem",
+  "type": "object",
+  "required": ["id", "name", "version", "author", "description", "tags"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$",
+      "description": "A unique, lowercase, hyphenated identifier for the Pack"
+    },
+    "name": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The human-readable name of the Pack"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "The version of the Pack, following Semantic Versioning (e.g., 1.0.0)"
+    },
+    "author": {
+      "type": "string",
+      "minLength": 1,
+      "description": "The name and email of the developer or organization"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10,
+      "description": "A brief description of the Pack"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "description": "A list of relevant keywords"
+    }
+  },
+  "additionalProperties": false
+}

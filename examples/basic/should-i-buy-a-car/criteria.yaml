@@ -1,0 +1,16 @@
+- name: "Financial Cost"
+  description: "The total cost of owning a car, including purchase price, insurance, fuel, and maintenance."
+  category: "Financial"
+  default_weight: 0.4
+- name: "Convenience"
+  description: "How much convenience a car would add to your life."
+  category: "Lifestyle"
+  default_weight: 0.3
+- name: "Alternatives"
+  description: "The availability and quality of alternative transportation options (e.g., public transit, ride-sharing, biking)."
+  category: "Lifestyle"
+  default_weight: 0.2
+- name: "Environmental Impact"
+  description: "The environmental footprint of owning a car."
+  category: "Environmental"
+  default_weight: 0.1

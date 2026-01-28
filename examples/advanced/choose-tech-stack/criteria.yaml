@@ -1,0 +1,20 @@
+- name: "Scalability"
+  description: "The ability of the tech stack to handle growth in users, data, and traffic."
+  category: "Technical"
+  default_weight: 0.25
+- name: "Community & Ecosystem"
+  description: "The size and health of the community, including the availability of libraries, tools, and support."
+  category: "Technical"
+  default_weight: 0.2
+- name: "Talent Pool"
+  description: "The availability of developers with expertise in the tech stack."
+  category: "Business"
+  default_weight: 0.2
+- name: "Development Velocity"
+  description: "The speed at which a team can develop and deploy new features."
+  category: "Business"
+  default_weight: 0.2
+- name: "Cost"
+  description: "The total cost of using the tech stack, including licensing, hosting, and developer salaries."
+  category: "Financial"
+  default_weight: 0.15

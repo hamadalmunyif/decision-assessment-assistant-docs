@@ -1,0 +1,7 @@
+recommendation:
+  - type: "positive"
+    template: "Based on your inputs, buying a car appears to be a good decision for you. The convenience and financial aspects seem to align with your priorities."
+  - type: "negative"
+    template: "Based on your inputs, buying a car might not be the best decision for you right now. The costs and available alternatives suggest you should reconsider."
+  - type: "neutral"
+    template: "The decision to buy a car is not clear-cut in your case. There are both pros and cons to consider. It is recommended to further evaluate your priorities."

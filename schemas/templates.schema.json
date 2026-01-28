@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://daa.example.com/schemas/templates.schema.json",
+  "title": "DAA Templates Schema",
+  "description": "JSON Schema for validating templates.yaml files in the DAA ecosystem",
+  "type": "object",
+  "required": ["recommendation"],
+  "properties": {
+    "recommendation": {
+      "type": "array",
+      "minItems": 3,
+      "items": {
+        "type": "object",
+        "required": ["type", "template"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["positive", "negative", "neutral"],
+            "description": "The type of recommendation"
+          },
+          "template": {
+            "type": "string",
+            "minLength": 10,
+            "description": "The template string for the recommendation"
+          }
+        },
+        "additionalProperties": false
+      }
+    }
+  },
+  "additionalProperties": false
+}

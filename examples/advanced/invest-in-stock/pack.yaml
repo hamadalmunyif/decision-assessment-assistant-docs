@@ -1,0 +1,6 @@
+id: invest-in-stock
+name: "Invest in a Stock Pack"
+version: 1.0.0
+author: "Manus AI"
+description: "An advanced pack to help you decide if you should invest in a stock."
+tags: ["finance", "investment", "stocks"]

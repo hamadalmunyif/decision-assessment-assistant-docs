@@ -1,0 +1,36 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://daa.example.com/schemas/criteria.schema.json",
+  "title": "DAA Criteria Schema",
+  "description": "JSON Schema for validating criteria.yaml files in the DAA ecosystem",
+  "type": "array",
+  "minItems": 3,
+  "items": {
+    "type": "object",
+    "required": ["name", "description", "category", "default_weight"],
+    "properties": {
+      "name": {
+        "type": "string",
+        "minLength": 1,
+        "description": "The name of the criterion"
+      },
+      "description": {
+        "type": "string",
+        "minLength": 10,
+        "description": "A clear explanation of what the criterion measures"
+      },
+      "category": {
+        "type": "string",
+        "minLength": 1,
+        "description": "The category of the criterion (e.g., Financial, Personal, Technical)"
+      },
+      "default_weight": {
+        "type": "number",
+        "minimum": 0.0,
+        "maximum": 1.0,
+        "description": "A default importance weight between 0.0 and 1.0"
+      }
+    },
+    "additionalProperties": false
+  }
+}
