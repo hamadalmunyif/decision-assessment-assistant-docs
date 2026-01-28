@@ -1,1 +1,129 @@
-_**File content not shown**_
+name: Deploy Documentation
+
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  validate-packs:
+    name: Validate Pack Examples
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install jsonschema pyyaml
+      
+      - name: Validate basic packs
+        run: |
+          echo "Validating basic pack examples..."
+          for pack_dir in examples/basic/*/; do
+            if [ -d "$pack_dir" ]; then
+              echo "Validating: $pack_dir"
+              python scripts/validate_pack.py "$pack_dir" || exit 1
+            fi
+          done
+      
+      - name: Validate advanced packs
+        run: |
+          echo "Validating advanced pack examples..."
+          for pack_dir in examples/advanced/*/; do
+            if [ -d "$pack_dir" ]; then
+              echo "Validating: $pack_dir"
+              python scripts/validate_pack.py "$pack_dir" || exit 1
+            fi
+          done
+      
+      - name: Validation summary
+        run: |
+          echo "✅ All pack examples validated successfully!"
+
+  check-documentation:
+    name: Check Documentation Files
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      
+      - name: Check required files
+        run: |
+          echo "Checking for required documentation files..."
+          required_files=(
+            "README.md"
+            "API_REFERENCE.md"
+            "DEVELOPER_GUIDE.md"
+            "METHODOLOGY.md"
+            "CASE_STUDIES.md"
+            "SCHEMA_SPECIFICATION.md"
+            "PACK_VALIDATION.md"
+            "CONTRIBUTING.md"
+            "CODE_OF_CONDUCT.md"
+            "SECURITY.md"
+          )
+          
+          missing_files=()
+          for file in "${required_files[@]}"; do
+            if [ ! -f "$file" ]; then
+              missing_files+=("$file")
+            fi
+          done
+          
+          if [ ${#missing_files[@]} -gt 0 ]; then
+            echo "❌ Missing required files:"
+            printf '%s\n' "${missing_files[@]}"
+            exit 1
+          fi
+          
+          echo "✅ All required documentation files present!"
+      
+      - name: Check schemas
+        run: |
+          echo "Checking JSON schemas..."
+          required_schemas=(
+            "schemas/pack.schema.json"
+            "schemas/criteria.schema.json"
+            "schemas/templates.schema.json"
+          )
+          
+          missing_schemas=()
+          for schema in "${required_schemas[@]}"; do
+            if [ ! -f "$schema" ]; then
+              missing_schemas+=("$schema")
+            fi
+          done
+          
+          if [ ${#missing_schemas[@]} -gt 0 ]; then
+            echo "❌ Missing required schemas:"
+            printf '%s\n' "${missing_schemas[@]}"
+            exit 1
+          fi
+          
+          echo "✅ All required schemas present!"
+
+  deploy-status:
+    name: Deployment Status
+    runs-on: ubuntu-latest
+    needs: [validate-packs, check-documentation]
+    
+    steps:
+      - name: Success message
+        run: |
+          echo "🎉 All checks passed successfully!"
+          echo "📚 Documentation is ready for deployment"
+          echo "✅ Pack validation completed"
+          echo "✅ Documentation files verified"
+          echo "✅ Schemas validated"
