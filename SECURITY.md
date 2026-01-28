@@ -4,7 +4,7 @@
 
 The Decision Assessment Assistant team and community take all security vulnerabilities seriously. We appreciate your efforts to responsibly disclose your findings, and will make every effort to acknowledge your contributions.
 
-To report a security vulnerability, please email us at **security@example.com** with a detailed description of the issue, the steps to reproduce it, and any potential impact.
+To report a security vulnerability, please email us at **hamad_almunif@icloud.com** with a detailed description of the issue, the steps to reproduce it, and any potential impact.
 
 **Please do not report security vulnerabilities through public GitHub issues.**
 

@@ -4,7 +4,7 @@ First off, thank you for considering contributing to Decision Assessment Assista
 
 ## Code of Conduct
 
-This project and everyone participating in it is governed by the [Decision Assessment Assistant Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to **community@example.com**.
+This project and everyone participating in it is governed by the [Decision Assessment Assistant Code of Conduct](CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report unacceptable behavior to **hamad_almunif@icloud.com**.
 
 ## How Can I Contribute?
 
